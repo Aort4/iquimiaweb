@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USUARIOS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="tablausuarios.css">
+</head>
+<body>
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    <div class="menu">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <img src="img/iquimianegro.png" class="image" alt="" id="cloud"/>
+                <span></span>
+            </div>
+         
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a id="inbox" href="tablausuarios.html">
+                        <ion-icon name="paper-plane-outline"></ion-icon>
+                        <span>USUARIOS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard.html">
+                        <ion-icon name="document-text-outline"></ion-icon>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ranking.html">
+                        <ion-icon name="star-outline"></ion-icon>
+                        <span>Lista Ranking</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="estadisticas.html">
+                        <ion-icon name="star-outline"></ion-icon>
+                        <span>Estadísticas</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <div>
+            <div class="linea"></div>
+            <div class="modo-oscuro">
+                <div class="info"></div>
+                <div class="switch"></div>
+            </div>
+    
+            <div class="usuario">
+                <img src="img/user.png" alt="">
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <span class="nombre" id="usuario"></span>
+                        <span class="email" id="email"></span>
+                    </div>
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+  
+    <main>
+        <div class="divSECTION">
+            <section class="home-section">
+                <form class="textPRIN">
+                    <label>USUARIOS</label>
+                </form>
+                <br>
+
+
+                <main class="table">
+                    <div class="ventana" id="Vent">
+                        <div class="input-box">
+                            <span class="details">Usuario</span>
+                            <select class="form-select" aria-label="Default select example" id="usuarios">
+                                <option value="null">Elija el usuario a eliminar...</option>
+                            </select>
+                        </div>
+            
+                        <button id="Registrar" class="button" onclick="eliminarUser()">Eliminar</button>
+                    </div>
+                    <div class="ventana2" id="Vent2">
+                        <div class="user-details">
+                            <div class="input-box">
+                                <span class="details">Usuario</span>
+                                <select class="form-select" aria-label="Default select example" id="usuarios1">
+                                    <option value="null">Elija el usuario a actualizar...</option>
+                                </select>
+                            </div>
+            
+                            <div class="input-box">
+                                <span class="details">Contraseña</span>
+                                <input id="Contraseña" type="password" placeholder="Contraseña" required>
+                            </div>
+                           
+                            <button id="Registrar" class="button" onclick="actualiza()">Actualizar</button>
+                        </div>
+                    </div>
+            
+                    <div class="ventana2" id="Vent3">
+                        <div class="user-details">
+            
+            
+                            <div class="input-box" id="user">
+                                <span class="details">Usuario</span>
+                                <input id="Usuario1" type="text" placeholder="Usuario" required>
+                            </div>
+            
+                            <div class="input-box">
+                                <span class="details">Contraseña</span>
+                                <input id="Contraseña1" type="password" placeholder="Contraseña" required>
+                            </div>
+                            
+                            <button id="RegistrarR" class="button" onclick="registrar()">Guardar</button>
+                        </div>
+                    </div>
+                    <section class="table__header">
+                        <h1></h1>
+                       
+                    </section>
+            
+                    <section id="btn">
+                        <div>
+                            <button id="azul" OnClick="User('#Vent3','#Vent2','#Vent')"><i
+                                    class="fa-solid fa-user-plus"></i></button>
+                            <button id="verde" OnClick="User('#Vent2','#Vent','#Vent3')"><i class="fa-solid fa-pencil"></i></button>
+                            <button id="rojo" OnClick="User('#Vent','#Vent2','#Vent3')"><i
+                                    class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                    </section>
+            
+                    <section class="table__body">
+                        <table>
+                            <thead>
+                                <tr>
+                            
+                                    <th> Usuario </th>
+                                    <th> Contraseña</th>
+                            
+                                </tr>
+                            </thead>
+                            <tbody id="tabla">
+                            </tbody>
+                        </table>
+                    </section>
+                </main>
+    
+                </div>
+
+
+    
+            </section>
+    
+    
+           
+    
+        </div>
+        
+    </main>
+</div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="tablausuarios.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+</body>
+</html>

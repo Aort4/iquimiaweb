@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    <div class="menu">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <img src="img/iquimianegro.png" class="image" alt="" id="cloud"/>
+                <span>DASHBOARD</span>
+            </div>
+         
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a id="inbox" href="dashboard.html">
+                        <ion-icon name="mail-unread-outline"></ion-icon>
+                        <span>Principal</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ranking.html">
+                        <ion-icon name="star-outline"></ion-icon>
+                        <span>Lista Ranking</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="VerificarAdmin()">
+                        <ion-icon name="paper-plane-outline"></ion-icon>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="estadisticas.html">
+                        <ion-icon name="paper-plane-outline"></ion-icon>
+                        <span>Estadísticas</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <div>
+            <div class="linea"></div>
+            <div class="modo-oscuro">
+                <div class="info"></div>
+                <div class="switch"></div>
+            </div>
+    
+            <div class="usuario">
+                <img src="img/user.png" alt="">
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <span class="nombre" id="usuario"></span>
+                        <span class="email" id="email"></span>
+                    </div>
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+  
+    <main>
+        <div class="divSECTION">
+            <section class="home-section">
+                <form class="textPRIN">
+                    <label>DASHBOARD</label>
+                </form>
+                <br>
+                <div class="main-skills">
+    
+                    <div class="card uno">
+                    
+                        <h3>LISTA DE RANKING</h3>
+                        <button id="BotonV1">Ver</button>
+                    </div>
+    
+                    <div class="card dos">
+                      
+                        <h3>USUARIOS</h3>
+                        <button id="BotonV2">Ver</button>
+                    </div>
+    
+                    <div class="card tres">
+                
+                        <h3>ESTADÍSTICAS</h3>
+                        <button id="BotonV3">Ver</button>
+                    </div>
+    
+                </div>
+    
+            </section>
+    
+    
+           
+    
+        </div>
+        
+    </main>
+</div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="btns.js"></script>
+</body>
+</html>
